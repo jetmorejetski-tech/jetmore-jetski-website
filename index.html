@@ -438,32 +438,54 @@
 
     .hero-img-wrap {
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
     }
-    .hero-img-wrap img {
-      border-radius: 8px;
-      box-shadow: var(--shadow-strong);
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 8% 10%;
+      background: radial-gradient(circle at center, rgba(0,122,255,0.4) 0%, transparent 65%);
+      filter: blur(50px);
+      z-index: 0;
+    }
+    .hero-doctor-img {
       width: 100%;
-      object-fit: cover;
-      height: 520px;
+      max-width: 480px;
+      height: auto;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 24px 40px rgba(0,0,0,0.55));
     }
-    .hero-badge {
-      position: absolute; bottom: -16px; left: -16px;
+    .hero-tagline {
+      position: absolute;
+      bottom: 24px; left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
       background: var(--electric);
       color: var(--white);
-      padding: 14px 20px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-badge strong {
-      display: block;
       font-family: var(--font-display);
-      font-size: 1.3rem; font-weight: 900;
-      text-transform: uppercase; line-height: 1;
+      font-size: 1.1rem; font-weight: 800;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 12px 22px;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(0,122,255,0.45);
+      z-index: 2;
+      white-space: nowrap;
     }
-    .hero-badge span {
-      font-size: 0.78rem; opacity: 0.85;
-      font-family: var(--font-display); letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .hero-cross {
+      display: inline-block;
+      width: 28px; height: 28px;
+      background: #d62828;
+      color: white;
+      font-family: var(--font-display);
+      font-weight: 900; font-size: 1.4rem;
+      line-height: 28px; text-align: center;
+      border-radius: 4px;
+      margin-right: 10px;
+      vertical-align: middle;
+      box-shadow: 0 2px 8px rgba(214,40,40,0.5);
     }
 
     /* =============================================
@@ -491,10 +513,30 @@
     /* =============================================
        SERVICES
     ============================================= */
-    #services { background: var(--off-white); }
+    #services {
+      position: relative;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    #services::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('jet-ski-engine-diagnostics-rotax-repair.jpeg') center/cover no-repeat;
+      opacity: 0.35;
+      z-index: 0;
+    }
+    #services::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.85) 0%, rgba(13,31,60,0.75) 100%);
+      z-index: 0;
+    }
+    #services > .container { position: relative; z-index: 1; }
 
     .services-header { text-align: center; margin-bottom: 50px; }
-    .services-header .section-sub { margin: 0 auto; }
+    .services-header .section-sub { margin: 0 auto; color: rgba(255,255,255,0.75); }
+    .services-header .section-title { color: var(--white); }
+    .services-header .label { color: var(--electric-light); }
 
     .services-grid {
       display: grid;
@@ -1183,31 +1225,27 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <div class="hero-kicker">Long Island's PWC Specialists</div>
+          <div class="hero-kicker">Home of the LI Jet Ski Doctor</div>
           <h1 class="hero-headline">
-            Expert Jet Ski Repair &amp;<br /><em>Mobile Service</em><br />on Long Island
+            <span class="hero-cross">+</span>Long Island's<br /><em>Jet Ski Doctor</em><br />Repair &amp; Mobile Service
           </h1>
-          <p class="hero-sub">Fix it right the first time. Repairs, maintenance, winterizing, insurance claim help, storage, and mobile service — we keep your machines on the water.</p>
+          <p class="hero-sub">Your neighbors trust us with their jet skis. Let us take care of yours. Computer diagnostics, expert PWC repair, winterizing, and mobile service across Long Island.</p>
           <div class="hero-ctas">
             <a href="https://jetmore-jetski-app.onrender.com/" target="_blank" class="btn btn-primary">Request Service</a>
             <a href="tel:5167651861" class="btn btn-outline">📞 Call / Text: 516-765-1861</a>
           </div>
           <div class="hero-bullets">
+            <div class="hero-bullet">Manufacturer-grade computer diagnostics</div>
             <div class="hero-bullet">Mobile service — we come to you</div>
-            <div class="hero-bullet">Honest, skilled repair & diagnostics</div>
             <div class="hero-bullet">Insurance claim assistance</div>
-            <div class="hero-bullet">Winterizing & shrink wrap</div>
+            <div class="hero-bullet">Winterizing &amp; shrink wrap</div>
             <div class="hero-bullet">Williams Tenders Authorized Service Center</div>
           </div>
         </div>
 
         <div class="hero-img-wrap">
-          <!-- REPLACE: main hero image — recommend the mobile service / dock shot (mobile-jet-ski-repair-long-island-dockside.jpeg) -->
-          <img src="mobile-jet-ski-repair-long-island-dockside.jpeg" alt="Jetmore Jetski mobile service on Long Island — jet ski serviced at customer's dock in Seaford" loading="eager" />
-          <div class="hero-badge">
-            <strong>Seaford, NY</strong>
-            <span>Nassau County</span>
-          </div>
+          <img src="li-jetski-doctor.png" alt="The LI Jet Ski Doctor — Jetmore Jetski Inc. mascot holding a PWC computer diagnostic tool" loading="eager" class="hero-doctor-img" />
+          <div class="hero-tagline">Keeping Long Island on the Water!</div>
         </div>
       </div>
     </div>
