@@ -511,6 +511,79 @@
     .trust-item .dot { width: 5px; height: 5px; background: var(--electric); border-radius: 50%; }
 
     /* =============================================
+       FEATURED OFFERINGS (Inspections + Brokerage)
+    ============================================= */
+    #featured {
+      background: var(--off-white);
+      padding: 70px 0;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .featured-card {
+      position: relative;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 40px 36px;
+      overflow: hidden;
+      min-height: 280px;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .featured-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--blue) 110%);
+      z-index: 0;
+    }
+    .featured-card > * { position: relative; z-index: 1; }
+    .featured-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
+    .featured-icon {
+      font-size: 2.4rem;
+      width: 60px; height: 60px;
+      background: rgba(0,122,255,0.18);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .featured-card .tag {
+      font-family: var(--font-display);
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--electric-light);
+      margin-bottom: 8px;
+    }
+    .featured-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.7rem; font-weight: 800;
+      letter-spacing: 0.02em; text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .featured-card p {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.98rem; line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .featured-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display);
+      font-size: 0.92rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--white);
+      align-self: flex-start;
+      border-bottom: 2px solid var(--electric);
+      padding-bottom: 4px;
+      transition: gap 0.2s;
+    }
+    .featured-card:hover .featured-link { gap: 14px; }
+
+    /* =============================================
        SERVICES
     ============================================= */
     #services {
@@ -1148,6 +1221,9 @@
       .hero-ctas { justify-content: center; }
 
       .services-grid { grid-template-columns: 1fr 1fr; }
+      .featured-grid { grid-template-columns: 1fr; gap: 20px; }
+      .featured-card { padding: 32px 26px; min-height: auto; }
+      .featured-card h3 { font-size: 1.4rem; }
 
       .insurance-grid { grid-template-columns: 1fr; gap: 40px; }
       .insurance-visual { display: none; }
@@ -1348,6 +1424,42 @@
       <div class="services-cta">
         <a href="https://jetmore-jetski-app.onrender.com/" target="_blank" class="btn btn-primary">Request Service</a>
         <a href="tel:5167651861" class="btn btn-dark" style="margin-left:12px;">Call / Text Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+    FEATURED OFFERINGS — Inspections + Brokerage
+  ================================================ -->
+  <section id="featured">
+    <div class="container">
+      <div class="services-header">
+        <span class="label">Beyond Repair</span>
+        <h2 class="section-title">Buying or Selling a Jet Ski?</h2>
+        <p class="section-sub">We protect both sides of the deal — inspections before you buy, brokerage when you sell.</p>
+      </div>
+      <div class="featured-grid">
+
+        <a href="pre-purchase-inspections.html" class="featured-card">
+          <div>
+            <div class="featured-icon">🩺</div>
+            <div class="tag">Before You Buy</div>
+            <h3>Pre-Purchase Inspections</h3>
+            <p>Computer diagnostics, compression test, hull check, jet pump, history review. Mobile — we meet you at the seller's location. Don't buy a lemon.</p>
+          </div>
+          <span class="featured-link">Learn More →</span>
+        </a>
+
+        <a href="preowned-jet-skis.html" class="featured-card">
+          <div>
+            <div class="featured-icon">🛥️</div>
+            <div class="tag">For Sale</div>
+            <h3>Preowned Jet Skis</h3>
+            <p>Browse used PWCs listed through our brokerage. We verify the seller, handle the paperwork, and only list machines we'd ride ourselves.</p>
+          </div>
+          <span class="featured-link">View Listings →</span>
+        </a>
+
       </div>
     </div>
   </section>
