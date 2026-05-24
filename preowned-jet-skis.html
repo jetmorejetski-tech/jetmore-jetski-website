@@ -278,7 +278,8 @@
   }
   .listing-thumb {
     width: 54px; height: 50px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #1a2540;
     cursor: pointer;
     border-radius: 4px;
     opacity: 0.55;
@@ -295,14 +296,14 @@
   .listing-main {
     flex: 1;
     position: relative;
-    background: linear-gradient(135deg, #e8edf5 0%, #d4dbe5 100%);
+    background: #1a2540;
     border-radius: 4px;
     overflow: hidden;
     min-width: 0;
   }
   .listing-main img {
     width: 100%; height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
   .listing-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
