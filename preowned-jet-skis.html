@@ -312,6 +312,32 @@
     aspect-ratio: 4/3;
     padding: 6px;
     background: var(--off-white);
+    position: relative;
+  }
+  .sold-card .listing-main img,
+  .sold-card .listing-thumb { filter: grayscale(0.55) brightness(0.85); }
+  .sold-card .listing-cta {
+    background: #888 !important;
+    pointer-events: none;
+  }
+  .sold-stamp {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-14deg);
+    background: rgba(214, 40, 40, 0.94);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    border: 4px solid var(--white);
+    outline: 3px solid rgba(214, 40, 40, 0.94);
+    z-index: 10;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+    pointer-events: none;
+    white-space: nowrap;
   }
   .listing-thumbs-side {
     display: flex; flex-direction: column;
@@ -507,8 +533,9 @@
 
       <div class="listings-grid">
 
-        <div class="listing-card">
+        <div class="listing-card sold-card">
           <div class="listing-gallery">
+            <div class="sold-stamp">Sold</div>
             <div class="listing-thumbs-side">
               <img class="listing-thumb active" src="rxpx-300-1.jpg" data-full="rxpx-300-1.jpg" alt="Photo 1" />
               <img class="listing-thumb" src="rxpx-300-2.jpg" data-full="rxpx-300-2.jpg" alt="Photo 2" />
@@ -531,7 +558,7 @@
               <div class="spec-row"><span class="lbl">Condition</span><span class="val">Excellent</span></div>
             </div>
             <p class="listing-desc">Runs well.</p>
-            <a href="tel:5167651861" class="listing-cta">Contact About This</a>
+            <span class="listing-cta">Sold</span>
           </div>
         </div>
 
