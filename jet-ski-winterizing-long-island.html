@@ -125,6 +125,23 @@
     .cta-block p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
     .cta-block a { display: inline-block; background: var(--electric); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 13px 28px; border-radius: var(--radius); margin: 6px; }
 
+    /* Welcoming inquiry block */
+    .inquiry { background: var(--off-white); border: 1px solid var(--gray-light); border-radius: 12px; padding: 32px; margin: 40px 0; text-align: center; }
+    .inquiry h2 { border: none; display: block; margin: 0 0 12px; }
+    .inquiry p { max-width: 620px; margin: 0 auto 20px; }
+    .photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .photo-strip img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: var(--shadow); display: block; }
+    .soft-cta { display: inline-block; background: var(--electric); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 16px 32px; border-radius: var(--radius); }
+    .soft-cta:hover { background: var(--blue); }
+    .inquiry .sub { font-size: 0.95rem; color: var(--gray); margin: 14px 0 0; }
+    .hero-soft { display: inline-block; margin-left: 10px; background: transparent; border: 2px solid var(--electric); color: var(--electric-light); font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 26px; border-radius: var(--radius); }
+    @media (max-width: 600px) {
+      .photo-strip { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .photo-strip img { height: 130px; }
+      .inquiry { padding: 24px 18px; }
+      .hero-soft { margin-left: 0; margin-top: 12px; }
+    }
+
     @media (max-width: 600px) {
       .page-hero { padding: 40px 0 36px; }
       .cta-block { padding: 28px 20px; }
@@ -152,7 +169,8 @@
       <div class="breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides.html">Guides</a> &nbsp;&rsaquo;&nbsp; Winterizing</div>
       <h1>Jet Ski Winterizing<br /><em>on Long Island</em></h1>
       <p>When to do it, what a proper job actually includes, and why skipping it is the most expensive mistake a PWC owner can make.</p>
-      <a href="tel:5167651861" class="cta">&#128222; Book Winterizing: 516-765-1861</a>
+      <a href="tel:5167651861" class="cta">&#128222; Call / Text 516-765-1861</a>
+      <a href="https://jetmore-jetski-app.onrender.com/" class="hero-soft">&#10052;&#65039; Ask About Winterizing</a>
     </div>
   </div>
   <div class="page-content">
@@ -200,6 +218,18 @@
         <h2>Come Spring</h2>
         <p>A machine that was winterized correctly wakes up easy: <a href="/jet-ski-spring-startup-long-island.html">de-winterize</a>, reconnect the battery, check the systems, and you're back on the water. A machine that wasn't is where the expensive surprises live. Winterizing isn't the exciting part of ownership — but it's what protects everything you spent on the machine in the first place.</p>
 
+        <div class="inquiry">
+          <h2>Not Sure What Your Ski Needs? Let's Talk.</h2>
+          <p>Winterizing isn't one-size-fits-all — a machine that lives in salt water needs different care than one that sits on a lift, and adding shrink wrap or storage changes things. You don't have to figure it out on your own. Tell us a little about your ski and <strong>we'll reach out to walk you through the options</strong>. No commitment, no pressure — just a straight conversation about what your machine needs before the cold sets in.</p>
+          <div class="photo-strip">
+            <img src="three-jet-skis-winterized-long-island.jpeg" alt="Three jet skis winterized and shrink wrapped on Long Island" loading="lazy" />
+            <img src="jet-ski-shrink-wrap-service-long-island-lift.jpeg" alt="Jet ski shrink wrapped on a lift after winterizing on Long Island" loading="lazy" />
+            <img src="two-jet-skis-shrink-wrapped-long-island.jpeg" alt="Two jet skis shrink wrapped for winter storage on Long Island" loading="lazy" />
+          </div>
+          <a href="https://jetmore-jetski-app.onrender.com/" class="soft-cta">&#10052;&#65039; Tell Us About Your Ski &rarr;</a>
+          <p class="sub">Prefer to talk now? <a href="tel:5167651861" style="color:var(--electric); font-weight:600;">Call or text 516-765-1861</a>.</p>
+        </div>
+
         <div class="faq">
           <h2>Winterizing FAQ</h2>
           <h3>When should I winterize my jet ski on Long Island?</h3>
@@ -219,10 +249,10 @@
         </div>
 
         <div class="cta-block">
-          <h2>Let Us Winterize It for You</h2>
-          <p>We come to your dock or driveway anywhere on Long Island, or store and winterize at our Seaford facility. Book before the first freeze.</p>
+          <h2>Ready to Winterize — or Just Have Questions?</h2>
+          <p>Whether you know exactly what you need or just want to talk it through, we're easy to reach. Tell us about your ski and we'll follow up — or call and we'll pick up. Book before the first freeze.</p>
           <a href="tel:5167651861">&#128222; Call / Text 516-765-1861</a>
-          <a href="https://jetmore-jetski-app.onrender.com/">Request Service Online</a>
+          <a href="https://jetmore-jetski-app.onrender.com/">&#10052;&#65039; Ask About Winterizing</a>
         </div>
       </article>
     </div>
