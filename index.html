@@ -349,6 +349,12 @@
     }
     #header.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.4); }
 
+    /* Seasonal winterizing banner (sits just below the fixed 68px header) */
+    .season-banner { margin-top: 68px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 10px; background: linear-gradient(90deg, var(--electric), var(--electric-light)); color: #fff; text-align: center; padding: 11px 16px; font-size: 0.95rem; line-height: 1.4; font-weight: 500; }
+    .season-banner strong { font-weight: 800; }
+    .season-banner .sb-cta { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+    @media (max-width: 600px) { .season-banner { font-size: 0.82rem; padding: 9px 12px; } }
+
     .header-inner {
       display: flex; align-items: center; justify-content: space-between;
       height: 68px;
@@ -465,7 +471,7 @@
       display: flex; align-items: center;
       overflow: hidden;
       background: var(--navy);
-      padding-top: 68px;
+      padding-top: 0;
     }
 
     .hero-bg {
@@ -1405,6 +1411,12 @@
     </div>
   </header>
 
+  <!-- Seasonal winterizing banner (remove after winter; if removed, restore #hero padding-top:68px) -->
+  <a href="/jet-ski-winterizing-long-island.html" class="season-banner">
+    <span>❄️ <strong>Winterizing season is here</strong> — waterfront haul-out &amp; winter storage now booking.</span>
+    <span class="sb-cta">Learn more →</span>
+  </a>
+
   <!-- Mobile Nav -->
   <nav class="mobile-nav" id="mobileNav">
     <a href="#services" onclick="closeMenu()">Services</a>
@@ -1503,7 +1515,7 @@
         <div class="service-card">
           <span class="service-icon">❄️</span>
           <div class="service-name">Winterizing</div>
-          <p class="service-desc">Proper <a href="/jet-ski-winterizing-long-island.html" style="color:inherit; text-decoration:underline;">Long Island jet ski winterizing</a> — flushing, fogging, stabilizing, and protecting your machine from freeze damage before the season ends.
+          <p class="service-desc">Proper <a href="/jet-ski-winterizing-long-island.html" style="color:inherit; text-decoration:underline;">Long Island jet ski winterizing</a> — flushing, fogging, stabilizing, and protecting your machine from freeze damage before the season ends. Like brushing your teeth for your ski — skip it and internal rust sets in for good.
           <br><br><a href="https://jetmore-jetski-app.onrender.com/" target="_blank" style="color:var(--electric); font-family:var(--font-display); font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">→ Request Winterizing</a>
           </p>
         </div>
