@@ -350,10 +350,13 @@
     #header.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.4); }
 
     /* Seasonal winterizing banner (sits just below the fixed 68px header) */
-    .season-banner { margin-top: 68px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 10px; background: linear-gradient(90deg, var(--electric), var(--electric-light)); color: #fff; text-align: center; padding: 11px 16px; font-size: 0.95rem; line-height: 1.4; font-weight: 500; }
-    .season-banner strong { font-weight: 800; }
-    .season-banner .sb-cta { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
-    @media (max-width: 600px) { .season-banner { font-size: 0.82rem; padding: 9px 12px; } }
+    .season-banner { margin-top: 68px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px; background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 45%, #38bdf8 100%); color: #06283d; text-align: center; padding: 13px 16px; font-size: 1rem; line-height: 1.4; font-weight: 600; box-shadow: 0 3px 16px rgba(34,211,238,0.5); }
+    .season-banner strong { font-weight: 800; color: #042536; }
+    .season-banner .sb-flake { font-size: 1.55em; line-height: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2)); animation: flakePulse 2.2s ease-in-out infinite; }
+    .season-banner .sb-cta { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+    @keyframes flakePulse { 0%, 100% { transform: scale(1); opacity: 0.92; } 50% { transform: scale(1.22); opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .season-banner .sb-flake { animation: none; } }
+    @media (max-width: 600px) { .season-banner { font-size: 0.9rem; padding: 12px 12px; gap: 4px 10px; } .season-banner .sb-flake { font-size: 1.4em; } }
 
     .header-inner {
       display: flex; align-items: center; justify-content: space-between;
@@ -1413,8 +1416,9 @@
 
   <!-- Seasonal winterizing banner (remove after winter; if removed, restore #hero padding-top:68px) -->
   <a href="/jet-ski-winterizing-long-island.html" class="season-banner">
-    <span>❄️ <strong>Winterizing season is here</strong> — waterfront haul-out &amp; winter storage now booking.</span>
-    <span class="sb-cta">Learn more →</span>
+    <span class="sb-flake">❄️</span>
+    <span class="sb-text"><strong>Winterizing season is here</strong> — waterfront haul-out &amp; winter storage now booking. <span class="sb-cta">Learn more →</span></span>
+    <span class="sb-flake">❄️</span>
   </a>
 
   <!-- Mobile Nav -->
